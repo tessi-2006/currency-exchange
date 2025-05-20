@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title> Currency Exchange & Calculator</title>
+  
+  <h1>CPEC SAINT BABETH.</h1>
+</head>
+<body>
+  <div class="main-container">
+
+    <div class="box">
+      <h2>Currency Exchange</h2>
+
+      <label>Amount:</label>
+      <input id="amount" type="number" placeholder="enter amount" />
+      <label>From Currency:</label>
+      <select id="fromCurrency">
+        <option value="FRW">FRW</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="KES">KES</option>
+        <option value="AUD">AUD</option>
+      </select>
+
+      <label>To Currency:</label>
+      <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="FRW">FRW</option>
+        <option value="AUD">AUD</option>
+        <option value="KES">KES</option>
+      </select>
+
+
+      <button onclick="convertCurrency()">Convert</button>
+
+      <div class="result" id="result"></div>
+      <div class="formula" id="formula"></div>
+    </div>
+
+  
+    <div class="box">
+      <h2>Calculator</h2>
+      <input class="calc-display" id="calc-display" disabled>
+      <div class="calculator-buttons" id="calc-buttons"></div>
+    </div>
+  </div>
+<script src="java.js"></script>
+  
+</body>
+</html>
