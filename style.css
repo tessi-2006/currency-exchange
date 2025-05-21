@@ -1,67 +1,59 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background:pink;
-      margin: 30px;
-    }
-    h1{
-        background-color:black;
-        color:white;
-        padding:20px 24px;
-    }
+#game {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  margin: 20px auto;
+  border: 2px solid #000;
+  overflow: hidden;
+  background-color: #fff;
+}
 
-    .main-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
+#player {
+  width: 50px;
+  height: 50px;
+  background: royalblue;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
 
-    .box {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      flex: 1 1 300px;
-      max-width: 450px;
-    }
+#obstacle {
+  width: 50px;
+  height: 50px;
+  background: crimson;
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  animation: moveObstacle 2s linear infinite;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+@keyframes moveObstacle {
+  0% {
+    right: -50px;
+  }
+  100% {
+    right: 650px;
+  }
+}
 
-    input, select, button {
-      padding: 10px;
-      margin: 8px 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
+.jump {
+  animation: jump 0.5s ease;
+}
 
-    .result, .formula {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .calc-display {
-      width: 100%;
-      font-size: 20px;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    .calculator-buttons input {
-      width: 23%;
-      margin: 1%;
-      font-size: 18px;
-      padding: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .main-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
